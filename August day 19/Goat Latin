@@ -1,0 +1,18 @@
+class Solution:
+    def toGoatLatin(self, S: str) -> str:
+        l=list(S.split(" "))
+        s2=""
+        s1=""
+        for i in range(len(l)):
+            s3=l[i]
+            s1+="a"
+            if s3[0]=="a" or s3[0]== "e" or s3[0]== "i" or s3[0]== "o" or s3[0]== "u" or s3[0] == "A" or s3[0]== "E" or s3[0]== "I" or s3[0]== "O" or s3[0]== "U":
+                s2+=s3+"ma"+s1+" "
+            else:
+                s2+=s3[1:]+s3[0]+"ma"+s1+" "
+        return s2[:len(s2)-1]
+                
+                
+                
+            
+        
